@@ -1,0 +1,284 @@
+{
+
+"login_reponse":
+{
+"statusCode":"0",
+"statusMessage":"Success"
+}
+
+,"login_request":
+{
+"username":"user",
+"password":"pwd"
+}
+
+,"GetCasesWithClientByWorkerId_response":
+{
+"statusCode":"0",
+"statusMessage":"Success",
+"cases":
+	[
+		{
+		"CaseID":1,
+		"Client":
+			{
+			"ClientID":1,
+			"Name":"Jerry Garfield",
+			"IDNumber":82349004,
+			"Age":9,
+			"DateofBirth":"2001-5-10",
+			"NextAction":"Caucasian",
+			"Gender":"M",
+			"Address1":"",
+			"Address2":"",
+			"PhoneNumber":""
+			},
+		"CaseNumber":83726732,
+		"NextAction":"",
+		"Information":""
+		},
+		{
+		"CaseID":2,
+		"Client":
+			{
+			"ClientID":6,
+			"Name":"Andrea Rankin",
+			"IDNumber":54386991,
+			"Age":12,
+			"DateofBirth":"1998-3-10",
+			"NextAction":"",
+			"Gender":"M",
+			"Address1":"",
+			"Address2":"",
+			"PhoneNumber":""
+			},
+		"CaseNumber":37920832,
+		"NextAction":"",
+		"Information":""
+		}
+	]
+}
+
+,"GetCaseDetail_response":
+{
+"statusCode":"0",
+"statusMessage":"Success",
+"case":
+	{
+	"CaseID":1,
+	"Client":
+		{
+		"ClientID":1,
+		"Name":"Jerry Garfield",
+		"IDNumber":82349004,
+		"Age":9,
+		"DateofBirth":"2001-5-10",
+		"NextAction":"Caucasian",
+		"Gender":"M",
+		"Address1":"",
+		"Address2":"",
+		"PhoneNumber":"",
+		"relatives":
+			[
+			{},{}
+			]
+		},
+	"CaseNumber":83726732,
+	"NextAction":"",
+	"Information":"",
+	"visits":
+		[
+		{},{}
+		]
+	}
+}
+
+
+,"CreateVisit_request":
+{
+"caseId":1,
+"planId":1,
+"GISLocation":"localtion"
+}
+
+
+,"CreateVisit_reponse":
+{
+"statusCode":"0",
+"statusMessage":"Success"
+}
+
+
+,"GetAssessmentsWithQuestionByCaseId_response":
+{
+"statusCode":"0",
+"statusMessage":"Success",
+"assessments":
+	[
+		{
+		"AssessmentID":1,
+		"VisitID":1,
+		"Subject":"string",
+		"Title":"string",
+		"Date/Time":"2008-05-23 12:34:55.232",
+		"Location":"",
+		"CaseId":1,
+		"Status":""
+		},
+		{
+		"AssessmentID":2,
+		"VisitID":1,
+		"Subject":"string",
+		"Title":"string",
+		"Date/Time":"2008-05-23 12:34:55.232",
+		"Location":"",
+		"CaseId":1,
+		"Status":""
+		}
+	]
+}
+
+
+,"CreateAssessmentWithQuestion":
+{
+"AssessmentID":5,
+"VisitID":1,
+"Subject":"string",
+"Title":"string",
+"Location":"",
+"CaseId":1,
+"Status":""
+}
+
+
+,"AnalyizeAssessment_response":
+{
+}
+
+,"UpdateQuestionWithAnswer_request":
+{
+"Answer":""
+}
+
+
+,"CreateNoteForQuestion_request":
+{
+"Title":"",
+"Date/Time":"",
+"Text":"",
+"Location":"",
+"CaseId":1,
+"QuestionId":1
+}
+
+,"CreateNoteForVisit_request":
+{
+"VisitId":1,
+"Title":"",
+"Date/Time":"",
+"Text":"",
+"Location":"",
+"CaseId":1
+}
+
+
+,"UpdateNoteForQuestion_request":
+{
+"Text":""
+}
+
+,"GetNotesByCaseId_response":
+{
+"statusCode":"0",
+"statusMessage":"Success",
+"notes":
+	[
+		{
+		"NoteId":1,
+		"VisitId":1,
+		"Title":"",
+		"Date/Time":"",
+		"Text":"",
+		"Location":"",
+		"CaseId":1,
+		"QuestionId":1
+		},
+		{}
+	]
+}
+
+,"GetPhotosByCaseId_response":
+{
+"statusCode":"0",
+"statusMessage":"Success",
+"photos":
+	[
+		{
+		"PhotoId":1,
+		"Title":"",
+		"Date/Time":"",
+		"Photo/Video":"",
+		"Location":"",
+		"CaseId":1,
+		"QuestionId":null,
+		"VisitId":1
+		},
+		{}
+	]
+}
+
+,"DownPhotoData_response":
+{
+"PhotoId":1,
+"Title":"",
+"Date/Time":"",
+"Photo/Video":"",
+"Location":"",
+"CaseId":1,
+"QuestionId":null,
+"VisitId":1
+}
+
+,"UploadPhotoData_request":
+{
+"Title":"",
+"Date/Time":"",
+"Photo/Video":"",
+"Location":"",
+"CaseId":1,
+"QuestionId":null,
+"VisitId":1
+}
+
+,"GetOutComesByAssessmentId_response":
+{
+"statusCode":"0",
+"statusMessage":"Success",
+"outcomes":
+	[
+		{"OutcomeID":1,
+		"AssessmentID":1,
+		"Date":"",
+		"Domain":"",
+		"Score":""
+		},
+		{}
+	]
+}
+
+,"GetRecommendationByOutComeId_response":
+{
+"statusCode":"0",
+"statusMessage":"Success",
+"recommendations":
+	[
+		{
+		"RecommendationID":1,
+		"outcomeId":1,
+		"Text":""
+		},
+		{}
+	]
+}
+
+}
